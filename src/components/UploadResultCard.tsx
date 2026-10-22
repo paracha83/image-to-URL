@@ -22,6 +22,7 @@ import { formatBytes } from '../lib/imageOptimizer';
 import { getSessionDeleteToken } from '../lib/userPreferences';
 import { useToast } from './Toast';
 import { AdSlot } from './AdSlot';
+import { AdsterraSmartlink, AdsterraBanner } from './AdsterraAds';
 
 interface UploadResultCardProps {
   image: ImageRecord;
@@ -361,8 +362,14 @@ export const UploadResultCard: React.FC<UploadResultCardProps> = ({ image, onRes
         </div>
       </div>
 
-      {/* Adsterra Designated Ad Slot for Result Page */}
-      <AdSlot id="ad-slot-result" />
+      {/* Adsterra Monetization Section */}
+      <div className="space-y-3 pt-2">
+        <AdSlot id="ad-slot-result" format="responsive" />
+        <AdsterraSmartlink
+          variant="compact"
+          label="Recommended Partner: High-Speed Image Cloud CDN"
+        />
+      </div>
 
       {/* Delete Confirmation Modal */}
       {showDeleteModal && (

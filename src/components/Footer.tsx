@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { UploadCloud, ShieldCheck, BookOpen } from 'lucide-react';
+import { FooterBannerSlot } from './AdUnits';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="w-full border-t border-zinc-800/80 bg-[#09090B] py-12 text-zinc-400">
+    <footer className="w-full border-t border-zinc-800/80 bg-[#09090B] py-10 text-zinc-400">
+      {/* Adsterra Footer Banner Slot (Unit 31861594 / 31861589 / 31861593) */}
+      <FooterBannerSlot className="mb-8" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-10">
           {/* Brand Info */}

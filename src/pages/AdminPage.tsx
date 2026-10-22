@@ -17,8 +17,14 @@ import {
 import { AdminStats, ImageRecord } from '../types';
 import { formatBytes } from '../lib/imageOptimizer';
 import { useToast } from '../components/Toast';
+import { useSeo } from '../lib/useSeo';
 
 export const AdminPage: React.FC = () => {
+  useSeo({
+    title: 'Admin Console',
+    description: 'System metrics and administrative controls for Image To URL.',
+  });
+
   const [adminSecret, setAdminSecret] = useState<string>('');
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [stats, setStats] = useState<AdminStats | null>(null);

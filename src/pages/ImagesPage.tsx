@@ -21,6 +21,7 @@ import { copyToClipboard } from '../lib/clipboard';
 import { formatBytes } from '../lib/imageOptimizer';
 import { useToast } from '../components/Toast';
 import { AdSlot } from '../components/AdSlot';
+import { AdsterraSmartlink } from '../components/AdsterraAds';
 import { useSeo } from '../lib/useSeo';
 
 export const ImagesPage: React.FC = () => {
@@ -323,6 +324,12 @@ export const ImagesPage: React.FC = () => {
 
       {/* Adsterra Designated Ad Slot for Images Page */}
       <AdSlot id="ad-slot-images" className="mt-12" />
+
+      {/* Adsterra Smartlink (Unit 31861587) */}
+      <AdsterraSmartlink
+        variant="compact"
+        label="Looking for unlimited permanent cloud storage? View verified sponsor deals"
+      />
 
       {/* Delete Confirmation Modal */}
       {imageToDelete && (

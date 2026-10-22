@@ -106,6 +106,18 @@ export const Navbar: React.FC = () => {
             <span className="capitalize text-[11px] text-zinc-400">{currentTheme}</span>
           </button>
 
+          {/* Adsterra Smartlink (Unit 31861587) */}
+          <a
+            href="https://arwf.org/4/c5d88eb3269ec23228f71a12c390c3a1"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all shadow-sm"
+            title="Sponsored partner special offer"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <span>Partner Deals</span>
+          </a>
+
           <Link
             to="/"
             className="px-4 py-2 rounded-lg text-sm font-medium bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-md shadow-indigo-600/20 flex items-center gap-1.5 transition-all"
@@ -165,6 +177,20 @@ export const Navbar: React.FC = () => {
               </Link>
             );
           })}
+          {/* Adsterra Smartlink Mobile Button (Unit 31861587) */}
+          <a
+            href="https://arwf.org/4/c5d88eb3269ec23228f71a12c390c3a1"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-medium bg-amber-500/10 text-amber-300 border border-amber-500/30"
+          >
+            <span className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-amber-400" />
+              <span>Partner Special Deals</span>
+            </span>
+            <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-amber-500/20">Sponsored</span>
+          </a>
+
           <div className="pt-3 border-t border-zinc-800 flex items-center justify-between">
             <span className="text-xs text-zinc-400 flex items-center gap-1">
               <Palette className="w-3.5 h-3.5 text-indigo-400" />

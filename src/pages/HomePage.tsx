@@ -18,6 +18,7 @@ import { UploadDropzone } from '../components/UploadDropzone';
 import { ImagePreviewCard } from '../components/ImagePreviewCard';
 import { UploadResultCard } from '../components/UploadResultCard';
 import { AdSlot } from '../components/AdSlot';
+import { AdsterraNativeBanner, AdsterraSmartlink } from '../components/AdsterraAds';
 import { ImageRecord, UploadOptions } from '../types';
 import { saveToHistory, removeFromHistory } from '../lib/storageHistory';
 import { useToast } from '../components/Toast';
@@ -403,6 +404,12 @@ export const HomePage: React.FC = () => {
             );
           })}
         </div>
+      </section>
+
+      {/* Adsterra Native Banner (Unit 31861586) & Smartlink (Unit 31861587) */}
+      <section className="max-w-4xl mx-auto px-4 pb-12 space-y-4">
+        <AdsterraNativeBanner title="Recommended by Sponsors" />
+        <AdsterraSmartlink variant="banner" label="Need High-Speed CDN & Media Storage for Your Web Apps?" />
       </section>
     </div>
   );

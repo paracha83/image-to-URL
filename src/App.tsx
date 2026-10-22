@@ -10,6 +10,7 @@ import { ToolsPage } from './pages/ToolsPage';
 import { AdminPage } from './pages/AdminPage';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { PrivacyPage, TermsPage, DmcaPage } from './pages/LegalPages';
+import { GlobalAdUnits } from './components/AdUnits';
 
 export default function App() {
   const [isOnline, setIsOnline] = useState<boolean>(navigator.onLine);
@@ -30,6 +31,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <ToastProvider>
+        {/* Dynamic Adsterra Popunder & Social Bar Hooks Injection */}
+        <GlobalAdUnits popunder={true} socialBar={true} />
+
         <div className="min-h-screen flex flex-col bg-[#09090B] text-zinc-100 font-sans selection:bg-indigo-600 selection:text-white">
           {/* Offline Warning Banner per Requirement 33 */}
           {!isOnline && (

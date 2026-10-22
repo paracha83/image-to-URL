@@ -16,6 +16,8 @@ import { optimizeImageClient, formatBytes, OptimizedResult } from '../lib/imageO
 import { copyToClipboard } from '../lib/clipboard';
 import { useToast } from '../components/Toast';
 import { useSeo } from '../lib/useSeo';
+import { AdSlot } from '../components/AdSlot';
+import { AdsterraSmartlink } from '../components/AdsterraAds';
 
 export const ToolsPage: React.FC = () => {
   useSeo({
@@ -251,6 +253,11 @@ export const ToolsPage: React.FC = () => {
         )}
       </section>
 
+      {/* Adsterra Responsive Banner (728x90 / 468x60 / 320x50) */}
+      <div className="py-2">
+        <AdSlot id="ad-slot-tools-mid" format="responsive" />
+      </div>
+
       {/* Tool 2: Shareable QR Code Generator */}
       <section className="rounded-2xl border border-zinc-800 bg-[#18181B] p-6 sm:p-8 space-y-6">
         <div className="flex items-center gap-3">
@@ -306,6 +313,12 @@ export const ToolsPage: React.FC = () => {
           </div>
         )}
       </section>
+
+      {/* Adsterra Smartlink (Unit 31861587) */}
+      <AdsterraSmartlink
+        variant="banner"
+        label="Looking for high-speed cloud media storage with global CDN?"
+      />
     </div>
   );
 };

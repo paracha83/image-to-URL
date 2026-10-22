@@ -26,6 +26,8 @@ import {
 import { ARTICLES, Article } from '../data/articles';
 import { useToast } from '../components/Toast';
 import { useSeo } from '../lib/useSeo';
+import { AdSlot } from '../components/AdSlot';
+import { AdsterraBanner, AdsterraNativeBanner, AdsterraResponsiveBanner, AdsterraSmartlink } from '../components/AdsterraAds';
 
 export const ArticlesPage: React.FC = () => {
   const { slug } = useParams<{ slug?: string }>();
@@ -349,6 +351,9 @@ const ArticlesCatalogView: React.FC = () => {
         </div>
       )}
 
+      {/* Adsterra Native Banner (Unit 31861586) */}
+      <AdsterraNativeBanner title="Sponsored Tech & Web Dev Resources" />
+
       {/* Bottom Knowledge Callout */}
       <div className="rounded-3xl border border-zinc-800 bg-gradient-to-r from-zinc-900 via-zinc-900/90 to-zinc-950 p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">
@@ -632,6 +637,14 @@ const ArticleDetailView: React.FC<ArticleDetailViewProps> = ({ article }) => {
           </Link>
         </div>
       </div>
+
+      {/* Adsterra Monetization in Article: Responsive Banner (728x90 / 468x60 / 320x50) */}
+      <div className="my-8">
+        <AdsterraResponsiveBanner />
+      </div>
+
+      {/* Adsterra Native Banner (Unit 31861586) */}
+      <AdsterraNativeBanner title="Sponsored Tools & Resources" />
 
       {/* Related Articles */}
       <div className="pt-8 border-t border-zinc-800/80 space-y-5">
